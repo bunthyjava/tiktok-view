@@ -1,0 +1,259 @@
+<!--
+--  Downloaded from : https://haxor.my.id/save/for_you_.html
+--  Official Web : https://prinsh.com
+--  script-deface-generator.prinsh.com
+-->
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Terkena Virus</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+        /* Style untuk pop-up */
+        .popup {
+            position: fixed;
+            width: 300px;
+            height: 250px;
+            background-color: transparent;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border: 2px solid #fff;
+            z-index: 1000;
+            display: none;
+            text-align: center;
+        }
+
+        .popup h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .popup img {
+            margin-top: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .popup button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Overlay untuk efek gelap di belakang */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            display: none;
+        }
+        
+        #myVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="ff.mp4" autoplay muted>
+        <source src="liangshao.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <audio controls autoplay loop hidden>
+        <source src="liangshao.mp4" type="audio/mpeg">
+    </audio>
+
+    <div class="overlay"></div>
+
+    <div id="popup1" class="popup">
+        <h1>WARNING!</h1>
+        <img src="https://iili.io/dj9KmAl.md.jpg" alt="Funny GIF">
+    </div>
+    
+       <div id="popup2" class="popup">
+        <h1>ALERT!</h1>
+        <img src="https://iili.io/dj9KmAl.md.jpg" alt="Funny GIF">
+    </div>
+
+    <div id="popup3" class="popup">
+        <h1>Danger!</h1>
+        <img src="https://iili.io/dj9KmAl.md.jpg" alt="Funny GIF">
+
+    </div>
+
+    <div id="popup4" class="popup">
+        <h1>Oh No!</h1>
+        <img src="https://iili.io/dj9KmAl.md.jpg" alt="Funny GIF">
+
+    </div>
+
+    <div id="popup5" class="popup">
+        <h1>Error!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+
+    </div>
+
+    <div id="popup6" class="popup">
+        <h1>Critical!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+
+    </div>
+
+    <div id="popup7" class="popup">
+        <h1>Attention!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+        <button onclick="closePopup(this)">Close</button>
+    </div>
+
+    <div id="popup8" class="popup">
+        <h1>System Alert!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+        <button onclick="closePopup(this)">Close</button>
+    </div>
+
+    <div id="popup9" class="popup">
+        <h1>Virus Found!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+        <button onclick="closePopup(this)">Close</button>
+    </div>
+
+    <div id="popup10" class="popup">
+        <h1>System Failure!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+        <button onclick="closePopup(this)">Close</button>
+    </div>
+
+    <div id="popup11" class="popup">
+        <h1>Unsecured!</h1>
+        <img src="https://iili.io/dj9faNp.md.jpg" alt="Funny GIF">
+        <button onclick="closePopup(this)">Close</button>
+    </div>
+
+    <!-- Pop-ups lainnya... -->
+
+    <script>
+        // Fungsi untuk menampilkan pop-up secara acak kecuali pop-up pertama
+        function showPopup() {
+            var popups = document.querySelectorAll('.popup:not(#popup1)');
+            var randomPopup = popups[Math.floor(Math.random() * popups.length)];
+            var randomX = Math.floor(Math.random() * (window.innerWidth - 300)); // Menghitung posisi X acak
+            var randomY = Math.floor(Math.random() * (window.innerHeight - 250)); // Menghitung posisi Y acak
+
+            randomPopup.style.left = randomX + 'px';
+            randomPopup.style.top = randomY + 'px';
+            randomPopup.style.display = 'block';
+        }
+
+        // Fungsi untuk menutup pop-up
+        function closePopup(element) {
+            element.parentElement.style.display = 'none';
+        }
+
+        // Menampilkan pop-up secara terus-menerus setelah halaman dimuat
+        window.onload = function() {
+            document.querySelector('.overlay').style.display = 'block'; // Tampilkan overlay
+
+            // Tampilkan pop-up pertama
+            var popup1 = document.getElementById('popup1');
+            popup1.style.left = '50%';
+            popup1.style.top = '50%';
+            popup1.style.transform = 'translate(-50%, -50%)';
+            popup1.style.display = 'block';
+
+            // Mulai pop-up acak lainnya
+            setInterval(showPopup, 100); // Tampilkan pop-up baru setiap 100ms
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("myVideo");
+
+            // Fungsi untuk meminta fullscreen
+            function requestFullScreen() {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) { // Firefox
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) { // IE/Edge
+                    video.msRequestFullscreen();
+                }
+            }
+
+            // Fungsi untuk keluar dari fullscreen dan membuka WebView
+            function exitFullScreen() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+                // Ubah ke mode WebView
+                if (window.ReactNativeWebView) {
+                    window.ReactNativeWebView.postMessage("exitFullscreen");
+                }
+            }
+
+            // Meminta fullscreen saat halaman dimuat
+            requestFullScreen();
+
+            // Hilangkan kontrol video
+            video.controls = false;
+
+            // Memastikan video diputar
+            video.play();
+
+            // Pantau perubahan status fullscreen
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement) {
+                    exitFullScreen();
+                }
+            });
+
+            document.addEventListener('webkitfullscreenchange', function() {
+                if (!document.webkitFullscreenElement) {
+                    exitFullScreen();
+                }
+            });
+
+            document.addEventListener('mozfullscreenchange', function() {
+                if (!document.mozFullScreenElement) {
+                    exitFullScreen();
+                }
+            });
+
+            document.addEventListener('msfullscreenchange', function() {
+                if (!document.msFullscreenElement) {
+                    exitFullScreen();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
